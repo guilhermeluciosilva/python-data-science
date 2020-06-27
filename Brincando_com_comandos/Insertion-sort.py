@@ -1,9 +1,10 @@
-A = [31, 41, 59, 26, 41, 58]
-for v in range(A):
-    chave = A[v]
-    i = v -1
-    while i > 0 and A[i] > chave:
-        A[i + 1] = A[i]
-        i = i - 1
-    A[i + 1] = chave
-print(A) 
+A = [31, 41, 59, 26, 41, 22]
+for chave, valor in enumerate(A):
+    for numero in range(len(A)):
+        if numero < valor:
+            A.insert(chave, numero)
+            break
+        else:
+            A.append(numero)
+
+print(A)
